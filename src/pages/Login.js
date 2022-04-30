@@ -21,7 +21,7 @@ const Login = () => {
       )
   }
 
-  if (redirect) { return <Redirect to="/" />}
+  if (redirect) { debugger; return <Redirect to="/" />}
 
   return (
     <div className="auth-page">
@@ -31,7 +31,7 @@ const Login = () => {
           <p className="subtitle has-text-grey">Please login to proceed.</p>
           <div className="box">
             <figure className="avatar">
-              <img src="https://placehold.it/128x128" alt="Company Logo" />
+              <img src="https://www.earlyparrot.com/images/socialmedia/fb-ep-logo-400.webp" alt="Company Logo" width={128} height='128'/>
             </figure>
             <form onSubmit={handleSubmit(onLogin)}>
               <div className="field">
@@ -62,9 +62,9 @@ const Login = () => {
             </form>
           </div>
           <p className="has-text-grey">
-            <a>Sign In With Google</a>&nbsp;
-            <a href="/">Sign Up</a> &nbsp;·&nbsp;
-            <a href="../">Need Help?</a>
+            {/* <a>Sign In With Google</a>&nbsp; */}
+            <a href="/register">Sign Up</a> &nbsp;
+            {/* <a href="../">Need Help?</a> */}
           </p>
         </div>
       </div>

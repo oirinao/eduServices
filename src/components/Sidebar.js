@@ -14,30 +14,22 @@ const Sidebar = () => {
       <div className="inner">
         <ul className="sidebar-menu">
           <li><span className="nav-section-title"></span></li>
-          <li className="have-children"><a href="#">User</a>
+          <li className="have-children"><a href="#">Services</a>
             <ul>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Account</a></li>
-              <li><a href="#">Settings</a></li>
+              <li><a href="/services/new">Create Service</a></li>
+              <li><a href="/services/me">Your Services</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">Messages</a>
+          <li className="have-children"><a href="#">Offers</a>
             <ul>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">Compose</a></li>
+              <li><a href="/offers/sent">Sent Offers</a></li>
+              <li><a href="/offers/received">Recieved Offers</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">Images</a>
-            <ul>
-              <li><a href="#">Library</a></li>
-              <li><a href="#">Upload</a></li>
-            </ul>
-          </li>
-          <li className="have-children"><a href="#">Settings</a>
-            <ul>
-              <li><a href="#">User settings</a></li>
-              <li><a href="#">App settings</a></li>
-            </ul>
+          <li className="have-children"><a href="#">Collaborations</a>
+            {/* <ul>
+              <li><a href="/collaborations/me">Recieved Collaborations</a></li>
+            </ul> */}
           </li>
         </ul>
       </div>

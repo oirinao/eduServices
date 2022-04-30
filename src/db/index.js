@@ -5,13 +5,13 @@ import 'firebase/compat/firestore';
 const db = firebase
   .initializeApp(
     {
-      apiKey: "AIzaSyCdL0KfEMFuytHwnPIn5JG-xDztE4_6iLs",
-      authDomain: "eduservices-c9ea2.firebaseapp.com",
-      projectId: "eduservices-c9ea2",
-      storageBucket: "eduservices-c9ea2.appspot.com",
-      messagingSenderId: "420758571242",
-      appId: "1:420758571242:web:5f5d8807070e7506c1af93",
-      measurementId: "G-K170JVYTJ3"
+      apiKey: "AIzaSyDv1kDlJ8rQHMthZhIzgwJWyr9XkOz-4Xw",
+      authDomain: "eduservices-90bc7.firebaseapp.com",
+      projectId: "eduservices-90bc7",
+      storageBucket: "eduservices-90bc7.appspot.com",
+      messagingSenderId: "470880507794",
+      appId: "1:470880507794:web:5889862a1d97a61ab2d34b",
+      measurementId: "G-74MDQM9WJH"
     }
   )
   .firestore()

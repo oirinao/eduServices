@@ -18,7 +18,7 @@ const ServiceDetail = props => {
 
 
   const { service, auth } = props
-  const { user } = auth
+  const { user } = service
 
   if (isFetching || serviceId !== service.id) { return <Spinner /> }
 
@@ -51,7 +51,7 @@ const ServiceDetail = props => {
                 <div className="service-price">
                   <div className="media service-user">
                     <div className="media-content">
-                      <p className="title is-4">${service.price}</p>
+                      <p className="title is-4">{service.price} MDL</p>
                       <p className="subtitle is-6">Per Hour</p>
                     </div>
                   </div>
@@ -68,9 +68,12 @@ const ServiceDetail = props => {
               </h2>
               <br />
               <div className="has-text-centered">
-                <OfferModal 
+                { auth.isAuth && auth.user.uid !== service.user.uid &&
+                  <OfferModal 
                   auth={auth}
                   service={service}/>
+                }
+                
               </div>
             </div>
           </div>

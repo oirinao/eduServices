@@ -6,7 +6,7 @@ import ReceivedMessages from './ReceivedMessages'
 
 const Navbar = props => {
 
-  const { user, isAuth } = props.auth
+  const { user, isAuth, messages } = props.auth
   const { logout, loadFresh } = props
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Navbar = props => {
           <Link 
             to="/"
             className="navbar-item">
-             <div className="title">Servicario</div>
+             <div className="title">eduServices</div>
           </Link>
 
           <a className="navbar-item is-hidden-desktop is-hidden-tablet">
@@ -66,7 +66,7 @@ const Navbar = props => {
           </div>
 
           <div className="navbar-end">
-            { user.uid &&
+            { isAuth &&
               <div className="navbar-item is-secondary user-welcome">
                 {`Hi ${user.fullName}`}
               </div>
@@ -76,6 +76,11 @@ const Navbar = props => {
               className="navbar-item is-secondary">
                 Home
             </Link>
+            {/* <Link 
+              to="/services" 
+              className="navbar-item is-secondary">
+                Services
+            </Link> */}
             <Link 
               to="/faq" 
               className="navbar-item is-secondary">
@@ -83,7 +88,7 @@ const Navbar = props => {
             </Link>
             { isAuth &&
               <React.Fragment>
-                <div className="navbar-item has-dropdown is-hoverable">
+                {/* <div className="navbar-item has-dropdown is-hoverable">
                   <a className="navbar-link">
                       Manage
                   </a>
@@ -114,13 +119,13 @@ const Navbar = props => {
                         Received Collaborations
                     </Link>
                   </div>
-                </div>
+                </div> */}
                 <div className="navbar-item has-dropdown is-hoverable">
                   <a className="navbar-link">
                       Messages
                   </a>
                   <div className="navbar-dropdown navbar-dropdown-messages">
-                    { user.messages && <ReceivedMessages /> }
+                    { messages && <ReceivedMessages /> }
                   </div>
                 </div>
               </React.Fragment>

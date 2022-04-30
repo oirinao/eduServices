@@ -77,7 +77,7 @@ const OfferModal = ({service, auth}) => {
           {service.user && `Uppon acceptance ${service.user.fullName}" will charge you:`}
         </div>
         <div className="service-price-value">
-          <h1 className="title">{offer.price}$</h1>
+          <h1 className="title">{offer.price} MDL</h1>
         </div>
       </div>
     </Modal>
